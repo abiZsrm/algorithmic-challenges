@@ -9,5 +9,34 @@ package chap16_Moderate;
  */
 public class Problem_16_17
 {
-
+	public static void main(String[] args) 
+	{
+		int[] input = { 2, -8, 3, -2, 4, -10 }; 
+		System.out.println(calculateContigousSequence(input));  
+	}
+	
+	public static int calculateContigousSequence(int[] nums)
+	{
+		int currSum = nums[0]; 
+		int maxSum = currSum; 
+		
+		for(int i = 1; i<nums.length; i++)
+		{
+			if(currSum + nums[i] > nums[i])
+			{
+				currSum = currSum + nums[i]; 
+			}
+			else
+			{
+				currSum = nums[i]; 
+			}
+			
+			if(currSum > maxSum)
+			{
+				maxSum = currSum; 
+			}
+		}
+		
+		return maxSum; 
+	}
 }
