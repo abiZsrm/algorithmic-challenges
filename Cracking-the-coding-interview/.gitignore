@@ -1,2 +1,8 @@
+# Ignoring the folders. 
 /bin/
 /.gradle/
+/.settings/
+
+# Ignoring the files. 
+/.project
+/.classpath
